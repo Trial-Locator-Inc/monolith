@@ -31,5 +31,6 @@ the values are constructed during the deployment process by Github Actions.
 
     python manage.py runserver
     python manage.py --check deploy
+    python manage.py makemigrations
     python manage.py migrate
     python manage.py test
