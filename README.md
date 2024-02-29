@@ -6,8 +6,31 @@ It is a Django app deployed to GCP.
 
 ## Environments
 
-### Dev (local)
+In all environments the relevant environment variables are set by
+`load_dotenv()`, which reads `.env` and sets the environment variables
+appropriately.
 
-### Staging
+### Local Development
 
-### Prod
+The following environment variables are set in a local file called `.env`. Place
+this file alongside `src/manage.py`.
+
+    DJANGO_SECRET_KEY='<long, randomly generated value>'
+    DJANGO_PG_NAME='<your system username>'
+    DJANGO_PG_USER='<your system username'
+    DJANGO_PG_PASSWORD=''
+    DJANGO_PG_HOST='localhost'
+    DJANGO_PG_PORT='5432'
+
+### Staging and Production
+
+These require the same environment variables to be set as local development, but
+the values are constructed during the deployment process by Github Actions.
+
+## Useful Django Commands
+
+    python manage.py runserver
+    python manage.py --check deploy
+    python manage.py makemigrations
+    python manage.py migrate
+    python manage.py test
