@@ -1,8 +1,12 @@
 argon2-cffi==23.1.0
 argon2-cffi-bindings==21.2.0
+asgiref==3.7.2
 build==0.10.0
 cffi==1.16.0
+Django==5.0.2
+django-tailwind==3.8.0
 packaging==23.0
 protobuf==4.25.1
 pycparser==2.21
 pyproject_hooks==1.0.0
+sqlparse==0.4.4
