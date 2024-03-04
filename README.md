@@ -37,3 +37,8 @@ the values are constructed during the deployment process by Github Actions.
     python manage.py test
     python manage.py tailwind start
     python manage.py tailwind build
+
+## Running in Production
+
+    python manage.py collectstatic
+    gunicorn triallocator.wsgi
