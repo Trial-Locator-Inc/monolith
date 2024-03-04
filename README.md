@@ -35,3 +35,5 @@ the values are constructed during the deployment process by Github Actions.
     python manage.py makemigrations
     python manage.py migrate
     python manage.py test
+    python manage.py tailwind start
+    python manage.py tailwind build
