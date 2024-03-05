@@ -1,0 +1,28 @@
+{% extends "theme/base.html" %}
+
+{% block title %}Trial Locator{% endblock %}
+{% block header_title %}About{% endblock %}
+{% block main %}
+<main>
+  <div class="mx-auto max-w-7xl sm:px-6 lg:px-8 text-slate-700">
+    <div class="max-w-prose">
+      <p class="mt-6">Trial Locator was founded with a singular mission: to make finding and enrolling in life-changing clinical
+      trials as easy as possible. Medicine, particularly oncology, is undergoing a revolution. Once untreatable diseases are
+      becoming treatable, and in some cases curable, but for many people the most promising treatments for their condition are
+      unavailable to them because those treatments are still going through clinical trials.</p>
+
+      <p class="mt-4">The drug approval process is well intentioned and run by people who care about patient safety and wellbeing.
+      Unfortunately, for many people the process takes too long and they die or become too sick for treatment before the drugs
+      that could help them become available. By making it easier for people to find what trials they are eligible for and discover
+      which of those trials are the most promising, and by reducing the friction involved in enrolling in trials, we can help more
+      people live longer, healthier lives than they otherwise would.</p>
+
+      <p class='mt-4'>We are run as a nonprofit and are in the process of converting from a C corp to a 501(c)(3) nonprofit. Our
+      financial data can be found <a href="{% url 'home:financials' %}" class="text-indigo-600 hover:text-indigo-500">here</a>.
+      If you would like to help us serve more people, more effectively you can <a href="{% url 'home:donate' %}"
+      class="text-indigo-600 hover:text-indigo-500">donate</a> or learn <a href="{% url 'home:volunteer' %}"
+      class="text-indigo-600 hover:text-indigo-500">how to volunteer</a>.</p>
+  </div>
+  </div>
+</main>
+{% endblock %}
