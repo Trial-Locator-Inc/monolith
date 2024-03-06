@@ -12,6 +12,7 @@ click==8.1.7
 cookiecutter==2.6.0
 Django==5.0.2
 django-browser-reload==1.12.1
+django-htmx==1.17.3
 django-tailwind==3.8.0
 gunicorn==21.2.0
 idna==3.6
