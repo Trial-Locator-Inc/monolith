@@ -8,6 +8,8 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		{% tailwind_preload_css %}
 		{% tailwind_css %}
+		<script defer src="{% static 'js/dist/htmx.min.js' %}"></script>
+		<script defer src="{% static 'js/dist/alpinejs.min.js' %}"></script>
 	</head>
 	<body hx-boost="true" class="flex flex-col h-screen min-h-screen bg-gray-50 font-serif leading-normal tracking-normal">
 {% block content %}
@@ -50,7 +52,7 @@
         </div>
         <div class="-mr-2 flex items-center sm:hidden">
           <!-- Mobile menu button -->
-          <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400     hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"    aria-controls="mobile-menu" aria-expanded="false">
+          <button type="button" class="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" aria-controls="mobile-menu" aria-expanded="false">
             <span class="absolute -inset-0.5"></span>
             <span class="sr-only">Open main menu</span>
             <!-- Menu open: "hidden", Menu closed: "block" -->
@@ -117,7 +119,7 @@
 {% endblock %}
 
 	{% block footer %}
-	<footer class="text-gray-600 text-xs my-1 mx-2 text-right">© <script>document.write(new Date().getFullYear())</script> Trial Locator, Inc.</footer>
+	<footer class="text-gray-600 text-xs my-1 mx-2 text-right">© <span x-data="{ year: new Date().getFullYear() }" x-text="year"></span> Trial Locator, Inc.</footer>
 	{% endblock %}
 	{% block scripts %}
 	<script></script>
